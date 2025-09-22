@@ -1,0 +1,14 @@
+h1,
+h2,
+h3 {
+  color: rgb(243, 146, 11);
+}
+
+.red-list {
+  color: antiquewhite;
+}
+
+#first-item {
+  font-weight: bold;
+  font-size: 40px;
+}
