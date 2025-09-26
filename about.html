@@ -3,7 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>About - Fullstack 2025</title>
+
+    <style>
+      * {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        background: #86b4c4;
+        background: linear-gradient(
+          90deg,
+          rgba(134, 180, 196, 1) 0%,
+          rgba(87, 199, 133, 1) 31%,
+          rgba(39, 194, 75, 1) 39%,
+          rgba(191, 214, 98, 1) 62%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        position: relative;
+        height: 200vh;
+      }
+      .text-1 {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        color: blue;
+        background-color: yellow;
+        padding: 20px;
+      }
+      .text-2 {
+        z-index: 5;
+        font-size: 1rem;
+        top: 10%;
+        left: 5%;
+        right: 5%;
+        color: red;
+        position: absolute;
+      }
+
+      @media (max-width: 400px) {
+        .text-2 {
+          font-size: 0.5rem;
+          left: 0;
+          right: 0;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header
+      style="background-color: lightblue; padding: 20px; text-align: center"
+    >
+      <h1>About This Project</h1>
+    </header>
+    <main>
+      <p class="text-1">
+        This project is a simple HTML template created for the Fullstack 2025
+        course. It demonstrates basic HTML structure, including headers, images,
+        links, and lists.
+      </p>
+      <p class="text-2" style="background-color: rgb(0, 255, 0); padding: 20px">
+        Feel free to explore the code and modify it to suit your needs!
+      </p>
+    </main>
+  </body>
 </html>

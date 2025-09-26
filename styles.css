@@ -1,14 +1,157 @@
-h1,
-h2,
-h3 {
-  color: rgb(243, 146, 11);
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
+:root {
+  background-color: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3,
 .red-list {
-  color: antiquewhite;
+  color: rgb(6, 0, 27);
+}
+
+h2 {
+  color: rgb(43, 213, 54);
+}
+
+.base-text {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.error-text {
+  color: red;
+  font-size: 3rem;
+}
+
+.main-font {
+  /* Placeholder for main font styling */
+}
+
+/* ===== LISTS ===== */
+.red-list {
+  color: rgb(255, 162, 41);
+}
+
+.red-list li {
+  color: red;
+}
+
+li {
+  color: blueviolet;
 }
 
 #first-item {
   font-weight: bold;
   font-size: 40px;
+}
+
+/* ===== NAVIGATION ===== */
+.search-engines-nav {
+  background-color: lightgray;
+  padding: 10px;
+  display: flex;
+}
+
+/* ===== FORM STYLES ===== */
+.form-section {
+  background-color: aquamarine;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ===== SECTIONS ===== */
+.intro-section {
+  margin-bottom: 20px;
+}
+
+.external-links {
+  margin-top: 10px;
+}
+
+.external-links a {
+  margin-right: 15px;
+}
+
+.lists-section {
+  margin: 20px 0;
+}
+
+.ordered-list-container,
+.definition-list-container {
+  margin-bottom: 20px;
+}
+
+.block-elements-section {
+  margin: 20px 0;
+}
+
+/* ===== HIGHLIGHTS AND SPECIAL STYLING ===== */
+.red-background {
+  background-color: red;
+}
+
+.yellow-highlight {
+  background-color: yellow;
+  font-size: 3rem;
+  padding: 0px 0px 0px 10px;
+  border: dashed 1px rgba(193, 40, 40, 0.578);
+  margin: 100px;
+}
+
+.facebook-link {
+  background-color: yellow;
+}
+
+/* ===== ARTICLE STYLES ===== */
+.divs-article {
+  background-color: rgb(37, 132, 214);
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+.article-content {
+  flex: 1;
+}
+
+.article-image {
+  flex-shrink: 0;
+}
+
+.nested-div {
+  display: block;
+}
+
+.nested-content-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-base {
+  /* Base text styling - can be expanded later */
+}
+
+.general-text {
+  /* General text styling - can be expanded later */
 }
