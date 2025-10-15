@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .grid-container {
+        width: 800px;
+        display: grid;
+        justify-items: stretch;
+        align-items: center;
+        align-content: end;
+        background-color: lightgrey;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 100px 100px auto auto auto 100px 100px;
+        grid-template-areas:
+          "head head head head"
+          ". . . right"
+          "left mid mid right"
+          "left mid mid right"
+          "left mid mid right"
+          ". . . right"
+          "foot foot foot foot";
+        padding: 20px;
+      }
+
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: repeat(9, 100px);
+          grid-template-areas:
+            "head head"
+            "mid mid"
+            "mid mid"
+            "mid mid"
+            "right right"
+            "right right"
+            "right right"
+            "right right"
+            "foot foot";
+        }
+      }
+
+      .grid-item {
+        background: #4caf50;
+        color: white;
+        padding: 20px;
+        font-size: 1.5em;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .grid-item-1 {
+        /* grid-row-start: 6;
+        grid-column-start: 2;
+        grid-row-end: 7;
+        grid-column-end: 4; */
+        grid-area: foot;
+      }
+
+      .grid-item-2 {
+        /* grid-row: 2 / 6;
+        grid-column: 4 / 5; */
+        grid-area: right;
+      }
+
+      .grid-item-3 {
+        /* grid-area: 3 / 2 / 5 / 4; */
+        grid-area: mid;
+      }
+
+      .grid-item-4 {
+        grid-area: head;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item grid-item-1">1</div>
+      <div class="grid-item grid-item-2" style="background: #ffe102">2</div>
+      <div class="grid-item grid-item-3" style="background: #0790f9">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+        incidunt voluptatem. Autem veniam adipisci fuga atque laboriosam
+        provident optio pariatur! A quia atque nisi minima exercitationem
+        veniam, facere magnam nam?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Repellendus, incidunt voluptatem. Autem veniam
+        adipisci fuga atque laboriosam provident optio pariatur! A quia atque
+        nisi minima exercitationem veniam, facere magnam nam? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Repellendus, incidunt voluptatem.
+        Autem veniam adipisci fuga atque laboriosam provident optio pariatur! A
+        quia atque nisi minima exercitationem veniam, facere magnam nam? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Repellendus, incidunt
+        voluptatem. Autem veniam adipisci fuga atque laboriosam provident optio
+        pariatur! A quia atque nisi minima exercitationem veniam, facere magnam
+        nam? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Repellendus, incidunt voluptatem. Autem veniam adipisci fuga atque
+        laboriosam provident optio pariatur! A quia atque nisi minima
+        exercitationem veniam, facere magnam nam?
+      </div>
+      <div class="grid-item grid-item-4" style="background: #757575">4</div>
+    </div>
+  </body>
+</html>
