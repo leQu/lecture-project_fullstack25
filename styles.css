@@ -6,6 +6,7 @@
 
 :root {
   background-color: rgb(255, 255, 255);
+  font-size: 16px;
 }
 
 h1,
@@ -20,9 +21,7 @@ h2 {
 }
 
 .base-text {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .error-text {
@@ -55,7 +54,7 @@ li {
 /* ===== NAVIGATION ===== */
 .search-engines-nav {
   background-color: lightgray;
-  padding: 10px;
+  padding: 0.5rem;
   display: flex;
 }
 
@@ -65,7 +64,7 @@ li {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -154,4 +153,46 @@ li {
 
 .general-text {
   /* General text styling - can be expanded later */
+}
+
+.transition-example-link {
+  margin: 100px 0 10px;
+  padding: 100px;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  /* transition: background-color 0.3s ease, transform 0.3s ease; */
+  color: black;
+  background-color: #eeff00;
+  transition-property: background-color, transform;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+/* .transition-example-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.5);
+} */
+
+.hidden-sibling {
+  display: none;
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+}
+
+.transition-example-link:hover {
+  background-color: #008cff;
+}
+
+.transition-example-link:hover ~ .hidden-sibling {
+  display: block;
+}
+
+.example-container {
+  margin: 50px;
+  position: relative;
+  height: 50vh;
 }
