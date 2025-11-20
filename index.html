@@ -97,6 +97,8 @@
             <input type="text" id="name" name="name" required />
           </div>
 
+          <a href="www.example.com">Visit Example</a>
+
           <div class="form-group">
             <label for="number">Number:</label>
             <input type="number" id="number" name="number" required />
@@ -169,7 +171,26 @@
 
     <div class="example-container">
       <a class="transition-example-link" href="">Click me</a>
-      <div class="hidden-sibling">You cant see me?</div>
+      <input type="checkbox" name="show-sibling" id="show-sibling" />
+      <div class="hidden-sibling">
+        <p class="hidden-sibling-text">This is a hidden sibling element.</p>
+      </div>
     </div>
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="border: 1px solid #000"
+    >
+    </canvas>
   </body>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(60, 44, 150, 50);
+
+    ctx.fillStyle = "#00FF00";
+    ctx.fillRect(89, 200, 100, 50);
+  </script>
 </html>

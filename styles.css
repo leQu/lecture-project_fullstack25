@@ -5,8 +5,17 @@
 }
 
 :root {
-  background-color: rgb(255, 255, 255);
-  font-size: 16px;
+  --main-bg-color: rgb(226, 10, 136);
+  --dark-text-color: #333;
+  --light-text-color: #777;
+  --main-heading-size: 2rem;
+  --sub-heading-size: 1rem;
+  --main-text-size: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
 }
 
 h1,
@@ -21,7 +30,7 @@ h2 {
 }
 
 .base-text {
-  font-size: 1rem;
+  font-size: var(--main-text-size);
 }
 
 .error-text {
@@ -60,7 +69,7 @@ li {
 
 /* ===== FORM STYLES ===== */
 .form-section {
-  background-color: aquamarine;
+  background-color: var(--main-bg-color);
 }
 
 .form-group {
@@ -168,31 +177,66 @@ li {
   color: black;
   background-color: #eeff00;
   transition-property: background-color, transform;
-  transition-duration: 1s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
 }
-/* .transition-example-link:hover {
+.transition-example-link:hover {
   background-color: #0056b3;
-  transform: scale(1.5);
-} */
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .hidden-sibling {
-  display: none;
+  display: block;
   width: 200px;
   height: 100px;
   background-color: lightcoral;
+  --bg-test-color: yellow;
+  animation: pulse 2s infinite;
 }
 
 .transition-example-link:hover {
   background-color: #008cff;
 }
 
-.transition-example-link:hover ~ .hidden-sibling {
+#show-sibling:checked ~ .hidden-sibling {
   display: block;
+  --bg-test-color: rgb(0, 255, 21);
+  background-color: lightcoral;
+  transform: skew(20deg, 20deg);
+}
+
+.hidden-sibling-text {
+  color: var(--bg-test-color);
 }
 
 .example-container {
   margin: 50px;
   position: relative;
   height: 50vh;
+}
+
+.main-container {
+  border: solid 2px black;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  div {
+    position: absolute;
+    p {
+      position: absolute;
+    }
+  }
 }
